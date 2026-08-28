@@ -1,0 +1,43 @@
+body {
+  background-color: whitesmoke;
+  font-weight: 900;
+  text-decoration: none;
+}
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+section {
+    background-color: lightslategray;
+    text-align: center;
+    border: black 4px solid;
+}
+div {
+    float: right;
+    margin: 0Px 120px 0 0;
+}
+p {
+    color: black;
+    margin: 150px 0 0 0;
+    display: inline-block;
+    border: black 4px solid;
+    background-color: lightslategray;
+} 
+a:link {
+  color: #1fa3c4d1;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 0 20px 0 20px;
+}
+
+a:visited {
+  color: #4a164f;
+  background-color:  transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
