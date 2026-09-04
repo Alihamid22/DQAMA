@@ -1,0 +1,926 @@
+/* Defines the shared colors, dimensions, shadows, and layout variables. */
+:root {
+  --bg: #0f0f13;
+  --bg-soft: #171922;
+  --panel: rgba(29, 32, 42, 0.85);
+  --panel-strong: #1c1f2a;
+  --card: #f5f1f3;
+  --text: #eef1f7;
+  --text-soft: #b8c0d1;
+  --text-dark: #1a1d26;
+  --line: rgba(255, 255, 255, 0.08);
+  --accent: #b31f4b;
+  --accent-strong: #8f163f;
+  --accent-soft: rgba(179, 31, 75, 0.15);
+  --white: #ffffff;
+  --shadow: 0 30px 80px rgba(14, 16, 22, 0.35);
+  --radius: 24px;
+  --container: 1180px;
+}
+
+/* Establishes the global box model and document scrolling behavior. */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Sets the page typography, background atmosphere, text color, and rhythm. */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(179, 31, 75, 0.22), transparent 30%),
+    linear-gradient(180deg, #0d0d12 0%, #111319 100%);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Normalizes shared media, links, form controls, and container sizing. */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.container {
+  width: min(var(--container), calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.narrow {
+  max-width: 760px;
+}
+
+/* Styles the sticky header, brand mark, navigation, and navigation actions. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(14px);
+  background: rgba(15, 15, 19, 0.7);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 88px;
+  gap: 20px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.brand-mark {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.6rem;
+  background: linear-gradient(135deg, var(--accent), #db4d7f);
+  color: var(--white);
+  box-shadow: 0 12px 28px rgba(179, 31, 75, 0.35);
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  color: var(--text-soft);
+}
+
+.site-nav a {
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+  color: var(--white);
+}
+
+.site-nav a.active::after,
+.site-nav a:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+
+/* Defines the shared button appearance and interaction states. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 0.95rem 1.5rem;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: linear-gradient(135deg, var(--accent), #e34171);
+  color: var(--white);
+  box-shadow: 0 20px 30px rgba(179, 31, 75, 0.25);
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--white);
+}
+
+/* Arranges the home page hero content and introductory metrics. */
+.hero {
+  padding: 90px 0 64px;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  align-items: center;
+  gap: 48px;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #f5a8bb;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.1;
+}
+
+h1,
+h2 {
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: -0.03em;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 6vw, 5.2rem);
+  max-width: 620px;
+}
+
+.lede {
+  max-width: 580px;
+  margin-top: 20px;
+  font-size: 1.08rem;
+  color: var(--text-soft);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.hero-metrics {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 26px;
+  padding: 0;
+  margin: 38px 0 0;
+}
+
+.hero-metrics li {
+  min-width: 120px;
+}
+
+.hero-metrics strong {
+  display: block;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  margin-bottom: 6px;
+}
+
+.hero-metrics span {
+  color: var(--text-soft);
+  font-size: 0.9rem;
+}
+
+/* Styles the profile image card and its availability badge. */
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+.profile-card {
+  position: relative;
+  width: min(480px, 100%);
+  padding: 18px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: var(--shadow);
+}
+
+.profile-card img {
+  width: 100%;
+  height: 640px;
+  object-fit: cover;
+  border-radius: 24px;
+}
+
+.card-glow::before {
+  content: "";
+  position: absolute;
+  inset: 30px -20px auto auto;
+  width: 160px;
+  height: 160px;
+  background: radial-gradient(circle, rgba(179, 31, 75, 0.8), transparent 70%);
+  filter: blur(20px);
+  z-index: -1;
+}
+
+.profile-badge {
+  position: absolute;
+  left: 38px;
+  bottom: 30px;
+  background: rgba(14, 15, 19, 0.88);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 14px 18px;
+  box-shadow: 0 25px 50px rgba(14, 15, 19, 0.3);
+}
+
+.profile-badge span {
+  display: block;
+  color: var(--text-soft);
+  font-size: 0.75rem;
+  margin-bottom: 4px;
+}
+
+.profile-badge strong {
+  font-size: 1.2rem;
+}
+
+/* Styles the client trust row below the hero section. */
+.trust-bar {
+  padding: 12px 0 30px;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 18px;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+/* Defines reusable section spacing, headings, and alternate section surfaces. */
+.section {
+  padding: 96px 0;
+}
+
+.section-alt {
+  background: rgba(255, 255, 255, 0.02);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.section-heading {
+  margin-bottom: 38px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: end;
+}
+
+.left-align {
+  justify-content: left;
+}
+
+.section-heading h2 {
+  font-size: clamp(2.2rem, 4vw, 3.3rem);
+  max-width: 620px;
+}
+
+/* Arranges and styles the project cards and their overlay content. */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 0.8fr;
+  gap: 24px;
+}
+
+.project-card {
+  position: relative;
+  min-height: 420px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: end;
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.project-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(17, 20, 28, 0.1), rgba(17, 20, 28, 0.85));
+}
+
+.featured {
+  background-image: url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80");
+}
+
+.project-card-two {
+  background-image: url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80");
+}
+
+.project-card-three {
+  background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80");
+}
+
+.project-card-content {
+  position: relative;
+  z-index: 1;
+  padding: 26px;
+}
+
+.project-tag {
+  margin: 0 0 14px;
+  color: #f6bfd0;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-card h3 {
+  font-size: clamp(1.8rem, 2.5vw, 2.4rem);
+  margin-bottom: 14px;
+}
+
+.project-card p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.project-card a {
+  display: inline-block;
+  margin-top: 18px;
+  color: var(--white);
+  font-weight: 600;
+}
+
+/* Arranges and styles the service summary items. */
+.two-column {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.service-item {
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
+
+.service-icon {
+  display: inline-flex;
+  width: 46px;
+  height: 46px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: var(--accent-soft);
+  color: #f8b8cb;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.service-item h3 {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.service-item p {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+/* Styles the testimonial presentation. */
+.testimonial-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.quote-card {
+  width: min(820px, 100%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 32px;
+  padding: 42px 36px;
+  box-shadow: var(--shadow);
+}
+
+.quote-mark {
+  margin: 0;
+  color: #f4a8bd;
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 700;
+}
+
+.quote-text {
+  margin: 16px 0 24px;
+  font-size: clamp(1.25rem, 2vw, 1.8rem);
+  color: var(--text);
+}
+
+.quote-person {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--text-soft);
+}
+
+/* Defines the shared inner-page hero and about page biography layout. */
+.page-hero {
+  padding: 96px 0 40px;
+}
+
+.page-hero h1 {
+  font-size: clamp(2.8rem, 6vw, 4.8rem);
+}
+
+.split-layout {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 34px;
+  align-items: center;
+}
+
+.portrait-box img {
+  width: 100%;
+  height: 620px;
+  object-fit: cover;
+  border-radius: 28px;
+  box-shadow: var(--shadow);
+}
+
+.story-copy {
+  font-size: 1.06rem;
+  color: var(--text-soft);
+}
+
+.story-copy p {
+  margin: 0 0 22px;
+}
+
+/* Styles the about page statistics and process timeline. */
+.mini-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+}
+
+.mini-stats div {
+  padding: 18px 16px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.mini-stats strong {
+  display: block;
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--white);
+  margin-bottom: 8px;
+}
+
+.timeline {
+  display: grid;
+  gap: 22px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 18px;
+  align-items: start;
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+}
+
+.timeline-item span {
+  display: inline-flex;
+  width: 60px;
+  height: 60px;
+  border-radius: 18px;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-soft);
+  color: #f4b0c7;
+  font-weight: 700;
+}
+
+.timeline-item h3 {
+  margin-bottom: 8px;
+  font-size: 1.6rem;
+}
+
+.timeline-item p,
+.skill-card p,
+.case-copy p,
+.case-copy li,
+.contact-list p,
+.contact-list a {
+  color: var(--text-soft);
+}
+
+/* Styles the skills grid and individual skill cards. */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.skill-card {
+  padding: 22px 20px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+}
+
+.skill-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+}
+
+/* Defines the CV layout, sidebar panels, experience entries, and highlights. */
+.cv-layout {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.cv-sidebar {
+  display: grid;
+  gap: 20px;
+}
+
+.cv-panel {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 22px;
+}
+
+.cv-panel h3 {
+  margin-bottom: 14px;
+  font-size: 1.1rem;
+}
+
+.cv-panel ul,
+.cv-item ul,
+.highlight-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--text-soft);
+}
+
+.cv-panel li,
+.cv-item li,
+.highlight-list li {
+  margin-bottom: 8px;
+}
+
+.cv-main {
+  display: grid;
+  gap: 24px;
+}
+
+.cv-section {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 24px 26px;
+}
+
+.cv-section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 14px;
+}
+
+.cv-item {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+}
+
+.cv-item:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.cv-meta {
+  color: #f4b8ca;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  padding-top: 6px;
+}
+
+.cv-item h3 {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+}
+
+.cv-company {
+  margin: 0 0 10px;
+  color: #f7d1dd;
+  font-weight: 600;
+}
+
+/* Defines the case study card layout and image treatments. */
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.case-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.case-image {
+  height: 260px;
+  background-size: cover;
+  background-position: center;
+}
+
+.case-one {
+  background-image: url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80");
+}
+
+.case-two {
+  background-image: url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80");
+}
+
+.case-three {
+  background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80");
+}
+
+.case-copy {
+  padding: 22px;
+}
+
+.case-copy h3 {
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.case-copy ul {
+  margin: 18px 0 0;
+  padding-left: 18px;
+}
+
+/* Defines the contact details panel and inquiry form layout. */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 26px;
+}
+
+.contact-card,
+.contact-form {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 28px;
+}
+
+.contact-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 18px;
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 18px;
+}
+
+.contact-list li {
+  display: grid;
+  gap: 6px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-list span {
+  color: #f5a8bb;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.social-stack {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.social-stack a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 10px 14px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 18px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  color: var(--text-soft);
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(13, 15, 20, 0.7);
+  color: var(--white);
+  border-radius: 14px;
+  padding: 0.95rem 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(230, 236, 245, 0.45);
+}
+
+/* Styles the footer and the mobile navigation toggle. */
+.site-footer {
+  border-top: 1px solid var(--line);
+  padding: 26px 0 40px;
+}
+
+.footer-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  color: var(--text-soft);
+}
+
+.footer-links {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 26px;
+  height: 2px;
+  margin: 6px auto;
+  background: var(--white);
+  border-radius: 99px;
+}
+
+/* Centers content and adapts the layout for medium screens. */
+.center-text {
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .hero-grid,
+  .two-column,
+  .split-layout,
+  .contact-layout,
+  .project-grid,
+  .case-study-grid,
+  .skills-grid,
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 72px;
+  }
+
+  .trust-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .profile-card img {
+    height: 560px;
+  }
+}
+
+/* Adapts navigation, spacing, and footer alignment for small screens. */
+@media (max-width: 720px) {
+  .nav-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 20px;
+    left: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    background: rgba(17, 19, 26, 0.96);
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  .nav-cta {
+    display: none;
+  }
+
+  .hero-metrics {
+    gap: 16px 22px;
+  }
+
+  .footer-wrap {
+    flex-direction: column;
+    text-align: center;
+  }
+}
