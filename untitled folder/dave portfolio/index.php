@@ -27,15 +27,6 @@
             </ul>
           </div>
 
-          <div class="hero-visual">
-            <div class="profile-card card-glow">
-              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=900&q=80" alt="Portrait of Dave van der Veen" />
-              <div class="profile-badge">
-                <span></span>
-                <strong></strong>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 

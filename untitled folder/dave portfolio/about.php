@@ -15,12 +15,9 @@
         </div>
       </section>
 
-      <!-- Presents the profile portrait, biography, and key statistics. -->
+      <!-- Presents the biography and key statistics. -->
       <section class="section">
-        <div class="container split-layout">
-          <div class="portrait-box">
-            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=900&q=80" alt="Dave van der Veen portrait" />
-          </div>
+        <div class="container narrow">
           <div class="story-copy">
             <p>
              

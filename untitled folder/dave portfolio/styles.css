@@ -237,62 +237,6 @@ h2 {
   font-size: 0.9rem;
 }
 
-/* Styles the profile image card and its availability badge. */
-.hero-visual {
-  display: flex;
-  justify-content: center;
-}
-
-.profile-card {
-  position: relative;
-  width: min(480px, 100%);
-  padding: 18px;
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  box-shadow: var(--shadow);
-}
-
-.profile-card img {
-  width: 100%;
-  height: 640px;
-  object-fit: cover;
-  border-radius: 24px;
-}
-
-.card-glow::before {
-  content: "";
-  position: absolute;
-  inset: 30px -20px auto auto;
-  width: 160px;
-  height: 160px;
-  background: radial-gradient(circle, rgba(179, 31, 75, 0.8), transparent 70%);
-  filter: blur(20px);
-  z-index: -1;
-}
-
-.profile-badge {
-  position: absolute;
-  left: 38px;
-  bottom: 30px;
-  background: rgba(14, 15, 19, 0.88);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 18px;
-  padding: 14px 18px;
-  box-shadow: 0 25px 50px rgba(14, 15, 19, 0.3);
-}
-
-.profile-badge span {
-  display: block;
-  color: var(--text-soft);
-  font-size: 0.75rem;
-  margin-bottom: 4px;
-}
-
-.profile-badge strong {
-  font-size: 1.2rem;
-}
-
 /* Styles the client trust row below the hero section. */
 .trust-bar {
   padding: 12px 0 30px;
@@ -349,8 +293,6 @@ h2 {
   min-height: 420px;
   border-radius: var(--radius);
   overflow: hidden;
-  background-size: cover;
-  background-position: center;
   display: flex;
   align-items: end;
   box-shadow: var(--shadow);
@@ -362,18 +304,6 @@ h2 {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg, rgba(17, 20, 28, 0.1), rgba(17, 20, 28, 0.85));
-}
-
-.featured {
-  background-image: url("https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=1200&q=80");
-}
-
-.project-card-two {
-  background-image: url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80");
-}
-
-.project-card-three {
-  background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80");
 }
 
 .project-card-content {
@@ -502,14 +432,6 @@ h2 {
   grid-template-columns: 0.9fr 1.1fr;
   gap: 34px;
   align-items: center;
-}
-
-.portrait-box img {
-  width: 100%;
-  height: 620px;
-  object-fit: cover;
-  border-radius: 28px;
-  box-shadow: var(--shadow);
 }
 
 .story-copy {
@@ -705,24 +627,6 @@ h2 {
   overflow: hidden;
 }
 
-.case-image {
-  height: 260px;
-  background-size: cover;
-  background-position: center;
-}
-
-.case-one {
-  background-image: url("https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80");
-}
-
-.case-two {
-  background-image: url("https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80");
-}
-
-.case-three {
-  background-image: url("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80");
-}
-
 .case-copy {
   padding: 22px;
 }
@@ -882,9 +786,6 @@ h2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .profile-card img {
-    height: 560px;
-  }
 }
 
 /* Adapts navigation, spacing, and footer alignment for small screens. */
