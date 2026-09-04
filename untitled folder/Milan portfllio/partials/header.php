@@ -27,6 +27,7 @@ $brandName = function_exists('text_value') ? text_value('brand_name') : 'milan';
           <li class="nav-item"><a class="nav-link <?= $activePage === 'home' ? 'active' : '' ?>" href="index.php">Home</a></li>
           <li class="nav-item"><a class="nav-link <?= $activePage === 'projects' ? 'active' : '' ?>" href="projects.php">Projecten</a></li>
           <li class="nav-item"><a class="nav-link <?= $activePage === 'about' ? 'active' : '' ?>" href="over-mij.php">Over mij</a></li>
+          <li class="nav-item"><a class="btn btn-outline-light btn-sm px-3 back-button" href="../team.html" onclick="if (document.referrer && new URL(document.referrer).origin === window.location.origin) { window.history.back(); return false; }">&larr; Terug</a></li>
           <li class="nav-item ms-lg-2"><a class="btn btn-outline-light btn-sm px-3 <?= $activePage === 'contact' ? 'active' : '' ?>" href="contact.php">Neem contact op</a></li>
         </ul>
       </div>
