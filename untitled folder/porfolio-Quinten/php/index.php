@@ -32,7 +32,7 @@
         <p style="font-size: 25px;">
         <h2> Ben Quinten ik ben 17 en ik woon in Leeuwarden.<br> Mijn hobbys zijn handbal, gamen. Ik woon
             met mijn moeder, vader en mijn broer.<br>We hebben een hond en een katten. Mijn interesses zijn coderen,
-            gamen</p>
+            gamen<br>Ik zit op de opleiding software developer.ik koos voor deze opleiding want ik vint het intresant hoe games worden gemaakt en werken</p>
 
         </h2>
         <div>
