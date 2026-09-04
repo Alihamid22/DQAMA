@@ -1,0 +1,30 @@
+body {
+    background-color: whitesmoke;
+}
+h1 {
+    text-align: center;
+}
+section {
+    background-color: lightslategray;
+    text-align: center;
+    border: black 4px solid;
+}a:link {
+  color: #1fa3c4d1;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 0 20px 0 20px;
+ 
+}
+
+a:visited {
+  color: #4a164f;
+  background-color:  transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+

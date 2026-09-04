@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmeren</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f7f6;
+            color: #000000;
+            line-height: 1.5;
+            display: flex;
+            justify-content: center;
+            padding: 90px 30px;
+        }
+        .detail-card {
+            background: white;
+            max-width: 1000px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #10b981;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .header i {
+            font-size: 50px;
+            color: #10b981;
+        }
+        h1 { margin: 0; font-size: 28px; }
+        .content ul {
+            list-style: none;
+            padding: 0;
+        }
+        .content li {
+            background: #f9f9f9;
+            margin-bottom: 10px;
+            padding: 15px;
+            border-left: 4px solid #10b981;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="detail-card">
+        <a href="index.html" class="back-btn">
+            <i class='bx bx-left-arrow-alt'></i> Terug naar Home
+        </a>
+
+        <div class="header">
+            <i class='bx bx-code-alt'></i>
+            <h1>Programmeren</h1>
+        </div>
+
+        <div class="content">
+            <p>Hier zijn de specifieke programmeervaardigheden die ik tijdens mijn eerste jaar heb geleerd:</p>
+            <ul>
+                <li><i class='bx bx-check-circle'></i> <strong>HTML & CSS:</strong> Bouwen van de structuur en styling van websites.</li>
+                <li><i class='bx bx-check-circle'></i> <strong>JavaScript:</strong> Toevoegen van interactiviteit aan webpagina's.</li>
+                <li><i class='bx bx-check-circle'></i> <strong>Python:</strong> Logica schrijven voor hardware projecten (zoals Raspberry Pi).</li>
+           
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

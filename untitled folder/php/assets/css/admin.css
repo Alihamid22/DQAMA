@@ -1,0 +1,163 @@
+:root {
+  --admin-ink: #171717;
+  --admin-paper: #f4f1ea;
+  --admin-line: #d9d2c6;
+}
+
+.admin-body {
+  min-height: 100vh;
+  background: var(--admin-paper);
+  color: var(--admin-ink);
+}
+
+.admin-shell {
+  min-height: 100vh;
+  padding: 3rem 1rem;
+}
+
+.admin-panel {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  background: #fffaf1;
+  border: 1px solid var(--admin-line);
+}
+
+.admin-panel h1 {
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+}
+
+.admin-panel h2 {
+  font-size: 1.4rem;
+  letter-spacing: 0;
+  margin-bottom: 1rem;
+}
+
+.admin-login-form {
+  max-width: 420px;
+}
+
+.admin-section {
+  padding: 2rem 0;
+  border-top: 1px solid var(--admin-line);
+}
+
+.admin-section label,
+.admin-login-form label {
+  display: block;
+  margin-bottom: .45rem;
+  font-size: .82rem;
+  font-weight: 800;
+}
+
+.admin-section .form-control,
+.admin-section .form-select,
+.admin-login-form .form-control {
+  padding: .8rem .9rem;
+  border: 1px solid var(--admin-line);
+  background: white;
+}
+
+.admin-project-list {
+  display: grid;
+  gap: .8rem;
+}
+
+.admin-project-row {
+  display: grid;
+  grid-template-columns: 84px 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: .8rem;
+  background: white;
+  border: 1px solid var(--admin-line);
+}
+
+.admin-project-thumb {
+  width: 84px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  background: #171717;
+  color: white;
+  font-weight: 800;
+}
+
+.admin-project-thumb img,
+.admin-current-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.admin-project-row h3 {
+  margin: 0 0 .25rem;
+  font-size: 1.1rem;
+  letter-spacing: 0;
+}
+
+.admin-project-row p {
+  margin: 0;
+  color: #716c63;
+  font-size: .9rem;
+}
+
+.admin-project-buttons {
+  display: flex;
+  gap: .5rem;
+  align-items: center;
+}
+
+.admin-project-form {
+  padding: 1.25rem;
+  border: 1px solid var(--admin-line);
+  background: #f8f4eb;
+}
+
+.admin-current-image {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: .75rem;
+  background: white;
+  border: 1px solid var(--admin-line);
+}
+
+.admin-current-image img {
+  width: 150px;
+  aspect-ratio: 16 / 10;
+}
+
+.admin-actions {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: flex-end;
+  gap: .75rem;
+  padding: 1rem 0 0;
+  background: linear-gradient(to top, #fffaf1 70%, rgba(255,250,241,0));
+}
+
+@media (max-width: 575.98px) {
+  .admin-project-row {
+    grid-template-columns: 64px 1fr;
+  }
+
+  .admin-project-buttons {
+    grid-column: 1 / -1;
+  }
+
+  .admin-project-buttons .btn,
+  .admin-project-buttons form {
+    width: 100%;
+  }
+
+  .admin-actions {
+    flex-direction: column;
+  }
+
+  .admin-actions .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Ontwikkeling - Details</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+        }
+        .detail-card {
+            background: white;
+            max-width: 1000px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            color: #3b82f6; /* رنگ آبی دکمه */
+            font-weight: bold;
+            margin-bottom: 20px;
+            transition: 0.3s;
+        }
+        .back-btn:hover { transform: translateX(-5px); }
+        
+        .header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+        .header i {
+            font-size: 40px;
+            color: #3b82f6; /* رنگ آبی آیکون */
+        }
+        h1 { margin: 0; font-size: 28px; color: #1e293b; }
+        
+        .content p { color: #64748b; margin-bottom: 20px; }
+        
+        .content ul { list-style: none; padding: 0; }
+        
+        .content li {
+            background: #eff6ff; /* پس‌زمینه آبی بسیار ملایم */
+            margin-bottom: 12px;
+            padding: 15px;
+            border-left: 4px solid #3b82f6;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+        }
+        .content li i { color: #3b82f6; font-size: 20px; }
+    </style>
+</head>
+<body>
+
+    <div class="detail-card">
+        <a href="index.html" class="back-btn">
+            <i class='bx bx-left-arrow-alt'></i> Terug naar Home
+        </a>
+
+        <div class="header">
+            <i class='bx bx-laptop'></i>
+            <h1>Web Ontwikkeling</h1>
+        </div>
+
+        <div class="content">
+            <p>Ik focus op het bouwen van moderne en gebruiksvriendelijke websites. Hier zijn de kernpunten:</p>
+            <ul>
+                <li><i class='bx bx-devices'></i> <strong>Responsive Design:</strong> Websites die perfect werken op zowel mobiel als desktop.</li>
+                <li><i class='bx bx-link-external'></i> <strong>Basis van API's:</strong> Het verbinden van websites met externe data.</li>
+                <li><i class='bx bx-bolt-circle'></i> <strong>Web Performance:</strong> Zorgen dat de website snel en soepel laadt.</li>
+                <li><i class='bx bx-check-shield'></i> <strong>Browser Compatibility:</strong> Testen of de site in alle browsers goed werkt.</li>
+                <li><i class='bx bx-code-curly'></i> <strong>HTML Semantisch:</strong> Gebruik van de juiste tags voor betere vindbaarheid (SEO).</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+</html>

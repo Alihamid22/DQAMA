@@ -1,0 +1,129 @@
+body {
+  background-color: aqua;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 0 25px 100px;
+}
+h2 {
+  color: black;
+  margin: 300px 0 0 0;
+  display: inline-block;
+  border: black 4px solid;
+  background-color: lightslategray;
+}
+section {
+  background-color: lightslategray;
+  text-align: center;
+  border: black 4px solid;
+}
+footer {
+  margin: 235px 0 0 0;}
+div {
+  float: right;
+  margin: 125Px 50px 0 0;
+  border: black 4px solid;
+}
+div2 {
+  float: left;
+  margin: 145Px 0 0 0;
+  display: flex;
+}
+a:link {
+  color: #1fa3c4d1;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 0 20px 0 20px;
+ 
+  
+}
+
+a:visited {
+  color: #4a164f;
+  background-color:  transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+input {
+  float: right;
+  margin: 0 60px 0 0;
+  background-color:  navy;
+  color: white;
+  cursor: pointer;
+  padding: 15px 25px;
+  border-radius: 20px;
+  box-shadow: 0 9px #080861;
+  border: none;
+}
+input:active {
+  background-color: navy;
+  box-shadow: 0 5px #080861;
+  transform: translateY(4px);
+}
+
+
+img:hover{
+   transform: scale(1.3);
+}
+
+#cookie-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4da6ff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 999;
+  display: none;
+}
+
+#cookie-button:hover {
+  background: #2d8fd4;
+}
+
+#cookie-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #222;
+  color: #fff;
+  padding: 40px 50px;
+  border-radius: 15px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  z-index: 1000;
+  font-size: 18px;
+  min-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+#cookie-popup a {
+  color: #4da6ff;
+}
+
+#cookie-popup button {
+  background: #4da6ff;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
